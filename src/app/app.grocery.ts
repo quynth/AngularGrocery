@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
     selector: 'app-grocery',
@@ -9,11 +9,14 @@ import { Component } from '@angular/core';
 })
 
 export class GroceryComponent {
-    task: string;
-    tasks = [];
+    task = "";
+    tasks: string[] = [];
+    
 
     onClick(){
-        this.tasks.push({name: this.task});
-    this.task = '';
+        this.tasks.push(this.task);
+        this.task = '';
     }
+
+
 }

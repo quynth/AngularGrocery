@@ -1,26 +1,41 @@
 <div>
-    <h2> Grocery list manager </h2>
- 
-    <div class="row">
-        <div class="col-xs-6 col-md-4">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="enter grocery items" id="txtSearch" [(ngModel)]="task" />
+  <h2>Grocery list manager</h2>
 
-                <div class="input-group-btn">
-                    <button class="btn btn-primary" type="button" (click)="onClick()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"></path>
-                          </svg>
-        </button>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="enter grocery items"
+          id="txtSearch"
+          [(ngModel)]="task"
+        />
+
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="onClick()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"
+              ></path>
+            </svg>
+          </button>
         </div>
+      </div>
     </div>
-    <br />
- 
-    <ul class="list-group">
-        <li *ngFor="let task of tasks" class="list-group-item">
-            <span> {{ task.name }} </span>
-        </li>
-    </ul>
+  </div>
+  <br />
+
+  <ul class="list-group">
+    <li *ngFor="let task of tasks" class="list-group-item">
+      <span> {{task}} </span>
+    </li>
+  </ul>
 </div>
